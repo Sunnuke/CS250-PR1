@@ -3,7 +3,7 @@ In this sprint your team will set up your GitHub workspace write a Requirements 
 
 ## **Team Members**
 - **Javier Rivera**
-- **Name 2**
+- **Trystan McCutcheon**
 - **Name 3**
 - **Name 4**
 

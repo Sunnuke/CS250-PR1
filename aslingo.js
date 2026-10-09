@@ -8,7 +8,7 @@
 // ];
 
 // Version 2
-const aslSigns = [
+const ASLSignsLibrary = [
     // Objects covering ASL phases
 
     // Thank you!
@@ -21,20 +21,20 @@ const aslSigns = [
         questions: ["Please watch the following video, then select the best answer that describes what is being signed?"],
         answers: ["Hello"]
     },
-    // Nice to meet you.
+    // Nice to meet you
     { 
         id: 2,
-        word: "",
+        word: "Nice to meet you",
         sources: [
             "https://www.youtube.com/watch?v=F7Wjb_AIvMA"
         ],
         questions: ["Please watch the following video, then select the best answer that describes what is being signed?"],
-        answers: ["Nice to meet you."]
+        answers: ["Nice to meet you"]
     },
     // Hello
     { 
         id: 3,
-        word: "",
+        word: "Hello",
         sources: [
             "https://www.youtube.com/watch?v=FVjpLa8GqeM"
         ],
@@ -44,7 +44,7 @@ const aslSigns = [
     // I love you! (Version)
     { 
         id: 4,
-        word: "",
+        word: "I love you!",
         sources: [
             "https://www.youtube.com/watch?v=rwBDGMQmmXk"
         ],
@@ -54,7 +54,7 @@ const aslSigns = [
     // Good Morning (Compound version)
     { 
         id: 5,
-        word: "",
+        word: "Good Morning",
         sources: [
             "https://www.youtube.com/watch?v=HWTOUetDsOk"
         ],
@@ -64,7 +64,7 @@ const aslSigns = [
     // Happy (one-handed version)
     { 
         id: 6,
-        word: "",
+        word: "Happy",
         sources: [
             "https://www.youtube.com/watch?v=N5GLqFNS3Uo"
         ],
@@ -74,7 +74,7 @@ const aslSigns = [
     // Help you
     { 
         id: 7,
-        word: "",
+        word: "Help you",
         sources: [
             "https://www.youtube.com/watch?v=JBlD9-AsQtM"
         ],
@@ -84,7 +84,7 @@ const aslSigns = [
     // Yes
     { 
         id: 8,
-        word: "",
+        word: "Yes",
         sources: [
             "https://www.youtube.com/watch?v=0usayvOXzHo"
         ],
@@ -94,7 +94,7 @@ const aslSigns = [
     // See you later
     { 
         id: 9,
-        word: "",
+        word: "See you later",
         sources: [
             "https://www.youtube.com/watch?v=3n81DT4NTOw"
         ],

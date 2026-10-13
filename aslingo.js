@@ -1,5 +1,5 @@
 // aslingo.js
-
+// LIBRARY (DB)
 // Testing ASL "library" – later you’ll load this from your backend/DB
 // const aslSigns = [
 //     { id: 1, word: "Hello", src: "https://www.youtube.com/embed/FVjpLa8GqeM?rel=0%3Bautoplay%3D1" },
@@ -103,275 +103,275 @@ const ASLSignsLibrary = [
     },
     //###################################################################################
 
-    //  Objects covering ASL ABC's
+    //  Objects covering ASL ABC's (NEED ASL Alphbate Source)
     // A
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // B
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // C
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // D
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // E
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // F 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // G 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // H 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // I 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // J 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // K 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // L 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // M 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // N 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // O 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // P 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // Q 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // R 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // S 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // T 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // U 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // V 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // W 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // X 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // Y 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    // Z 
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    },
-    //###################################################################################
-    { 
-        id: #,
-        word: "",
-        sources: [
-            ""
-        ],
-        questions: [""],
-        answers: []
-    }
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // B
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // C
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // D
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // E
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // F 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // G 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // H 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // I 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // J 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // K 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // L 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // M 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // N 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // O 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // P 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // Q 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // R 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // S 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // T 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // U 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // V 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // W 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // X 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // Y 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // // Z 
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // },
+    // //###################################################################################
+    // { 
+    //     id: #,
+    //     word: "",
+    //     sources: [
+    //         ""
+    //     ],
+    //     questions: [""],
+    //     answers: []
+    // }
 ];

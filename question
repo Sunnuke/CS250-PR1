@@ -1,0 +1,92 @@
+import {ASLSignsLibrary} from "./aslingo";
+
+class Question {
+        // Date fields are private (plz ask me if you don't understand the "#" but it is supposed to make data fields private?)
+    #id;
+    #answer;
+    #questionText;
+    #wrongAnswers;
+    #answerSelection;
+
+    // Basic constructor for the question
+    constructor (id) {
+        this.#id = id;
+        this.#answer = "";
+        this.#questionText = [];
+        this.#wrongAnswers = [];
+        this.#answerSelection =[];
+    }
+
+    // Good old GETs & SETs nothing else!
+    // Getters
+    get id() {
+        return this.#id;
+    }
+    get answer() {
+        return this.#answer;
+    }
+    get questionText() {
+        return this.#questionText;
+    }
+    get wrongAnswers() {
+        return this.#wrongAnswers;
+    }
+    get answerSelection() {
+        return this.#answerSelection;
+    }
+    
+    // Setters
+    set id(num) {
+        this.#id = num;
+    }
+    set answer(text) {
+        this.#answer = text;
+    }
+    set questionText(text) {
+        this.#questionText;
+    }
+    set wrongAnswers(wrongs) {
+        this.#wrongAnswers = wrongs;
+    }
+    set answerSelection(selection) {
+        this.#answerSelection = selection;
+    }
+    
+    // Methods
+    // This method find The object that matches the ID number that was given
+    pickAnySign() {
+        const signId = id();
+        const selectedSign = ASLSignsLibrary[signId - 1];
+        answer(selectedSign.word);
+        questionText(selectedSign.questions[0]);
+    }
+    // This method is designed to look for random filler answers and none of them should match the correct answer
+    grabWrongAnswers() {
+        var ids = [];
+        var currId = 0;
+        for (var i = 0; i < 3; i++) {
+            currId = Math.floor(Math.random + ASLSignsLibrary.length) + 1;
+            if (this.#wrongAnswers.length < 3) {
+                if (ids.includes(ASLSignsLibrary[currId].id)) {
+                    continue;
+                }
+                else {
+                    ids.push(ASLSignsLibrary[currId].id);
+                    temp_list = wrongAnswers();
+                    temp_list.push(ASLSignsLibrary[currId].word);
+                    wrongAnswers(temp_list);
+                }
+            }
+            else {
+                break;
+            }
+        }
+    }
+    // This function is supposed to combine the correct answer with the wrong answer is and make a random selection
+    makeQuizSelection() {
+        var temp_answer = answer();
+        var temp_wrongs = wrongAnswers();
+        temp_wrongs.push(temp_answer);
+        answerSelection(temp_wrongs);
+    }
+}

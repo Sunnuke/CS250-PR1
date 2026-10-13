@@ -2,15 +2,16 @@ class Quiz {
     // Date fields are private (plz ask me if you don't understand the "#" but it is supposed to make data fields private?)
     #ID;
     #numQuestions;
-    quizQuestions;
+    #quizQuestions;
     #correct;
     #result;
 
     // Basic constructor for the quiz
-    constructor (id, numQuestions, quizQuestions) {
+    // Input should come from front end, From the quiz options!
+    constructor (id, numQuestions) {
         this.#ID = id;
         this.#numQuestions = numQuestions;
-        this.quizQuestions = quizQuestions;
+        this.#quizQuestions = [];
         this.#correct = 0;
         this.#result = 0.0;
     }
@@ -24,7 +25,7 @@ class Quiz {
         return this.#numQuestions;
     }
     get quizQuestions() {
-        return this.quizQuestions;
+        return this.#quizQuestions;
     }
     get correct() {
         return this.#correct;
@@ -41,7 +42,7 @@ class Quiz {
         this.#numQuestions = numQuestions;
     }
     set quizQuestions(listOfQuestions) {
-        this.quizQuestions = listOfQuestions;
+        this.#quizQuestions = listOfQuestions;
     }
     set correct(num) {
         this.#correct = num;
@@ -51,5 +52,5 @@ class Quiz {
     }
     
     // Methods
-    
+
 }

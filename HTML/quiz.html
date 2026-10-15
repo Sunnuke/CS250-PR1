@@ -28,36 +28,55 @@
         import { Quiz } from "../JAVASCRIPT/quiz.js";
         import { ASLSignsLibrary } from "../JAVASCRIPT/aslingo.js";
       
-        const quiz = new Quiz(1, 1);
-        const question = quiz.getQuizQuestions[0];
+        const quiz = new Quiz(1, 5);
+        let currentQuestionIndex = 0;
+        let question = quiz.getQuizQuestions[currentQuestionIndex];
+      
         const score = document.getElementById("score");
 
-        document.getElementById("question").textContent = question.getQuestionText;
-        document.getElementById("video").src = 
-            ASLSignsLibrary[question.getId - 1].sources[0].replace("watch?v=", "embed/");
-        
         const right = document.getElementById("right");
-        right.textContent = question.getAnswer;
-
         const wrong1 = document.getElementById("wrong1");
         const wrong2 = document.getElementById("wrong2");
         const wrong3 = document.getElementById("wrong3");
+        
+        function displayQuestion() {
+            document.getElementById("question").textContent = question.getQuestionText;
+            document.getElementById("video").src = 
+                ASLSignsLibrary[question.getId - 1].sources[0].replace("watch?v=", "embed/");
+            
+            right.textContent = question.getAnswer;
+            wrong1.textContent = question.getWrongAnswers[0];
+            wrong2.textContent = question.getWrongAnswers[1];
+            wrong3.textContent = question.getWrongAnswers[2];
+        }
 
-        wrong1.textContent = question.getWrongAnswers[0];
-        wrong2.textContent = question.getWrongAnswers[1];
-        wrong3.textContent = question.getWrongAnswers[2];
+        displayQuestion();
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < quiz.getQuizQuestions.length) {
+                question = quiz.getQuizQuestions[currentQuestionIndex];
+                displayQuestion();
+            }
+        }
 
         right.onclick = function() {
-            console.log("score before click:", quiz.getCorrect);
             const newScore = quiz.getCorrect + 1;
             quiz.setCorrect = newScore;
             
             right.classList.add("rightbutton");
+            
             setTimeout(function() {
                 right.classList.remove("rightbutton");
-            }, 250)
+            }, 250);
+          
             console.log("correct: ", quiz.getCorrect);
             score.textContent = "Correct: " + quiz.getCorrect;
+
+            setTimeout(function() {
+                nextQuestion();
+            }, 500);
         }
 
         wrong1.onclick = function() {

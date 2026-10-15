@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ASLingo Homepage</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>
+      <img src="./ASLingoLogo.png" width="500">
+    </h1>
+
+    <iframe id="video" width="500" height="300"></iframe>
+
+    <p id="question"></p>
+    
+    <script src="aslingo.js"></script>
+    <script src="quiz.js"></script>
+    <script>
+        const quiz = new Quiz(1,1);
+        quiz.quizQuestions = [ASLSignsLibrary[0]];
+        const sign = quiz.quizQuestions[0];
+
+        document.getElementById("question").textContent = sign.questions[0];
+        document.getElementById("video").src = sign.sources[0].replace("watch?v=", "embed/");
+    </script>
+
+
+  </body>
+</html>

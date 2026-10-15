@@ -48,7 +48,9 @@
         wrong3.textContent = question.getWrongAnswers[2];
 
         right.onclick = function() {
-            quiz.setCorrect = quiz.correct + 1;
+            console.log("score before click:", quiz.getCorrect);
+            const newScore = quiz.getCorrect + 1;
+            quiz.setCorrect = newScore;
             
             right.classList.add("rightbutton");
             setTimeout(function() {

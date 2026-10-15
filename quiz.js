@@ -1,3 +1,7 @@
+// Importing
+import {Question} from "./question.js";
+import {ASLSignsLibrary} from "./aslingo.js";
+
 class Quiz {
     // Date fields are private (plz ask me if you don't understand the "#" but it is supposed to make data fields private?)
     #ID;
@@ -14,43 +18,71 @@ class Quiz {
         this.#quizQuestions = [];
         this.#correct = 0;
         this.#result = 0.0;
+
+        this.makeQuestions(numQuestions);
     }
 
     // Good old GETs & SETs nothing else!
     // Getters
-    get ID() {
+    get getID() {
         return this.#ID;
     }
-    get numQuestions() {
+    get getNumQuestions() {
         return this.#numQuestions;
     }
-    get quizQuestions() {
+    get getQuizQuestions() {
         return this.#quizQuestions;
     }
-    get correct() {
+    get getCorrect() {
         return this.#correct;
     }
-    get result() {
+    get getResult() {
         return this.#result;
     }
     
     // Setters
-    set ID(letter) {
+    set setID(letter) {
         this.#ID = letter;
     }
-    set numQuestions(numQuestions) {
+    set setNumQuestions(numQuestions) {
         this.#numQuestions = numQuestions;
     }
-    set quizQuestions(listOfQuestions) {
+    set setQuizQuestions(listOfQuestions) {
         this.#quizQuestions = listOfQuestions;
     }
-    set correct(num) {
+    set setCorrect(num) {
         this.#correct = num;
     }
-    set result(num) {
+    set setResult(num) {
         this.#result = num;
     }
     
     // Methods
+    makeQuestions(num) {
+        var numOfQuestions = num;
+        var ids = [];
+        var currId = 0;
+        
+        // This for loop is pretty much like the one in question.js but it is not nested!
+        for (var i = 0; i < numOfQuestions; i++) {
+            currId = Math.floor(Math.random() * ASLSignsLibrary.length) + 1;
+            if (!(ids.includes(currId))) {
+                ids.push(currId);
+                this.#quizQuestions.push(new Question(currId));
+            }
+            else {
+                --i;
+            }
+        }
+    }
+
+    finalGrade() {
+        var correctAnswers = this.getCorrect;
+        var numberOfQuestionsAnswered = this.getNumQuestions;
+        var gradePercentage = correctAnswers / numberOfQuestionsAnswered;
+        this.setResult = gradePercentage * 100;
+    };
 
 }
+
+export {Quiz};

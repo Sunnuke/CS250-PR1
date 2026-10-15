@@ -23,8 +23,7 @@
         <button id="wrong3">FastAPI</button>
     </div>
     
-    <script src="aslingo.js"></script>
-    <script src="quiz.js"></script>
+    
     <script type="module">
         import { Quiz } from "../JAVASCRIPT/quiz.js";
         import { ASLSignsLibrary } from "../JAVASCRIPT/aslingo.js";
@@ -49,7 +48,7 @@
         wrong3.textContent = question.getWrongAnswers[2];
 
         right.onclick = function() {
-            quiz.correct = quiz.correct + 1;
+            quiz.setCorrect = quiz.correct + 1;
             
             right.classList.add("rightbutton");
             setTimeout(function() {

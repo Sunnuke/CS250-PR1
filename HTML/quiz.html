@@ -2,12 +2,12 @@
 <html>
   <head>
     <title>ASLingo Quiz</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
   </head>
 
   <body>
     <h1>
-      <img src="./ASLingoLogo.png" width="500">
+      <img src="../ASLingoLogo.png" width="500">
     </h1>
 
     <b id="score">Correct: 0</b>
@@ -23,33 +23,41 @@
         <button id="wrong3">FastAPI</button>
     </div>
     
-    <script src="aslingo.js"></script>
-    <script src="quiz.js"></script>
-    <script>
-        const quiz = new Quiz(1,1);
-        quiz.quizQuestions = [ASLSignsLibrary[0]];
-        const sign = quiz.quizQuestions[0];
+    
+    <script type="module">
+        import { Quiz } from "../JAVASCRIPT/quiz.js";
+        import { ASLSignsLibrary } from "../JAVASCRIPT/aslingo.js";
+      
+        const quiz = new Quiz(1, 1);
+        const question = quiz.getQuizQuestions[0];
         const score = document.getElementById("score");
 
-        document.getElementById("question").textContent = sign.questions[0];
-        document.getElementById("video").src = sign.sources[0].replace("watch?v=", "embed/");
+        document.getElementById("question").textContent = question.getQuestionText;
+        document.getElementById("video").src = 
+            ASLSignsLibrary[question.getId - 1].sources[0].replace("watch?v=", "embed/");
         
         const right = document.getElementById("right");
-        right.textContent = sign.answers[0];
+        right.textContent = question.getAnswer;
 
         const wrong1 = document.getElementById("wrong1");
         const wrong2 = document.getElementById("wrong2");
         const wrong3 = document.getElementById("wrong3");
 
+        wrong1.textContent = question.getWrongAnswers[0];
+        wrong2.textContent = question.getWrongAnswers[1];
+        wrong3.textContent = question.getWrongAnswers[2];
+
         right.onclick = function() {
-            quiz.correct = quiz.correct + 1;
+            console.log("score before click:", quiz.getCorrect);
+            const newScore = quiz.getCorrect + 1;
+            quiz.setCorrect = newScore;
             
             right.classList.add("rightbutton");
             setTimeout(function() {
                 right.classList.remove("rightbutton");
             }, 250)
-            console.log("correct: ", quiz.correct);
-            score.textContent = "Correct: " + quiz.correct;
+            console.log("correct: ", quiz.getCorrect);
+            score.textContent = "Correct: " + quiz.getCorrect;
         }
 
         wrong1.onclick = function() {

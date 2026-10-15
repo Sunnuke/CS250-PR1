@@ -22,42 +22,73 @@
         <button id="wrong2">Computer Science</button>
         <button id="wrong3">FastAPI</button>
     </div>
+    <button id="finish">Finish Quiz</button>
     
     
     <script type="module">
         import { Quiz } from "../JAVASCRIPT/quiz.js";
         import { ASLSignsLibrary } from "../JAVASCRIPT/aslingo.js";
       
-        const quiz = new Quiz(1, 1);
-        const question = quiz.getQuizQuestions[0];
+        const quiz = new Quiz(1, 5);
+        let currentQuestionIndex = 0;
+        let question = quiz.getQuizQuestions[currentQuestionIndex];
+      
         const score = document.getElementById("score");
 
-        document.getElementById("question").textContent = question.getQuestionText;
-        document.getElementById("video").src = 
-            ASLSignsLibrary[question.getId - 1].sources[0].replace("watch?v=", "embed/");
-        
         const right = document.getElementById("right");
-        right.textContent = question.getAnswer;
-
         const wrong1 = document.getElementById("wrong1");
         const wrong2 = document.getElementById("wrong2");
         const wrong3 = document.getElementById("wrong3");
+        
+        function displayQuestion() {
+            document.getElementById("question").textContent = question.getQuestionText;
+            document.getElementById("video").src = 
+                ASLSignsLibrary[question.getId - 1].sources[0].replace("watch?v=", "embed/");
+            
+            right.textContent = question.getAnswer;
+            wrong1.textContent = question.getWrongAnswers[0];
+            wrong2.textContent = question.getWrongAnswers[1];
+            wrong3.textContent = question.getWrongAnswers[2];
+        }
 
-        wrong1.textContent = question.getWrongAnswers[0];
-        wrong2.textContent = question.getWrongAnswers[1];
-        wrong3.textContent = question.getWrongAnswers[2];
+        displayQuestion();
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < quiz.getQuizQuestions.length) {
+                question = quiz.getQuizQuestions[currentQuestionIndex];
+                displayQuestion();
+            } else {
+                quiz.finalGrade();
+
+                document.getElementById("question").textContent =
+                    "Quiz Complete! Score: " + quiz.getCorrect + "/5 (" + quiz.getResult + "%)";
+
+                document.getElementById("video").style.display = "none";
+                right.style.display = "none";
+                wrong1.style.display = "none";
+                wrong2.style.display = "none";
+                wrong3.style.display = "none";
+              }
+        }
 
         right.onclick = function() {
-            console.log("score before click:", quiz.getCorrect);
             const newScore = quiz.getCorrect + 1;
             quiz.setCorrect = newScore;
             
             right.classList.add("rightbutton");
+            
             setTimeout(function() {
                 right.classList.remove("rightbutton");
-            }, 250)
+            }, 250);
+          
             console.log("correct: ", quiz.getCorrect);
             score.textContent = "Correct: " + quiz.getCorrect;
+
+            setTimeout(function() {
+                nextQuestion();
+            }, 500);
         }
 
         wrong1.onclick = function() {
@@ -66,6 +97,10 @@
                 wrong1.classList.remove("wrongbutton");
             }, 250)
             console.log("wrong");
+
+            setTimeout(function() {
+                nextQuestion();
+                }, 500);
         }
         wrong2.onclick = function() {
             wrong2.classList.add("wrongbutton");
@@ -73,6 +108,11 @@
                 wrong2.classList.remove("wrongbutton");
             }, 250)
             console.log("wrong");
+
+            setTimeout(function() {
+                nextQuestion();
+                }, 500);
+          
         }
         wrong3.onclick = function() {
             wrong3.classList.add("wrongbutton");
@@ -80,9 +120,25 @@
                 wrong3.classList.remove("wrongbutton");
             }, 250)
             console.log("wrong");
-        }
 
+            setTimeout(function() {
+                nextQuestion();
+                }, 500);
+          
+        }
+        document.getElementById("finish").onclick = function() {
+            quiz.finalGrade();
         
+            var history = JSON.parse(localStorage.getItem("quizHistory")) || [];
+        
+            history.push(quiz.getResult);
+        
+            localStorage.setItem("quizHistory", JSON.stringify(history));
+        
+            window.location.href = "history.html";
+        }
+    
+            
     </script>
 
   </body>

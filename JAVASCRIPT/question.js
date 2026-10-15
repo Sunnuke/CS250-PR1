@@ -10,15 +10,15 @@ class Question {
 
     // Basic constructor for the question
     constructor (id) {
-        this.#id = id;
-        this.#answer = "";
-        this.#questionText = "";
-        this.#wrongAnswers = [];
-        this.#answerSelection =[];
+        this.#id = id; // ID number of the question object
+        this.#answer = ""; // The string that represents the answer of the object
+        this.#questionText = ""; // The string that represents the text for the question
+        this.#wrongAnswers = []; // A list of wrong answers
+        this.#answerSelection =[]; // A list of wrong answers and the answer that will be combined and randomly organized for the question
         // Calling methods to set the values of theconstructed question
         this.pickAnySign(); // Picking a random ASL sign from ASLSignsLibrary
         this.grabWrongAnswers(); // Picking 3 random ASL sign, as wrong answers from ASLSignsLibrary
-        this.makeQuizSelection(); // 
+        this.makeQuizSelection(); // Making a random list of answer selections
     }
 
     // Good old GETs & SETs nothing else!
@@ -71,13 +71,8 @@ class Question {
         var temp_list = []
         for (var i = 0; i < 3; i++) {
             currId = Math.floor(Math.random() * ASLSignsLibrary.length) + 1;
-            if (this.#wrongAnswers.length < 3) {
-                if (
-                    !(ids.includes(currId)) &&
-                    (currId != this.getId) &&
-                    (ASLSignsLibrary[currId - 1].word != this.getAnswer) &&
-                    !(temp_list.includes(ASLSignsLibrary[currId - 1].word))
-                ) {
+            if (this.#wrongAnswers.length < 4) {
+                if (!(ids.includes(currId)) && (currId != this.getId)) {
                     ids.push(currId);
                     temp_list.push(ASLSignsLibrary[currId - 1].word);
                 }

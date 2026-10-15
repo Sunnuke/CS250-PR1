@@ -13,13 +13,13 @@ class Quiz {
     // Basic constructor for the quiz
     // Input should come from front end, From the quiz options!
     constructor (id, numQuestions) {
-        this.#ID = id;
-        this.#numQuestions = numQuestions;
-        this.#quizQuestions = [];
-        this.#correct = 0;
-        this.#result = 0.0;
+        this.#ID = id; // Alphabetical character has the ID for the quiz 
+        this.#numQuestions = numQuestions; // Number that dictates the generation of questions for the quiz
+        this.#quizQuestions = []; // A list Of question objects
+        this.#correct = 0; // Correct number counter, to be increment for when a question is answered correctly
+        this.#result = 0.0; // Result percentage from the quiz
 
-        this.makeQuestions(numQuestions);
+        this.makeQuestions(numQuestions); // Start generating the projected number of question objects
     }
 
     // Good old GETs & SETs nothing else!
@@ -58,6 +58,7 @@ class Quiz {
     }
     
     // Methods
+    // Generate unique Question objects
     makeQuestions(num) {
         var numOfQuestions = num;
         var ids = [];
@@ -75,14 +76,13 @@ class Quiz {
             }
         }
     }
-
+    // Compute the grade of the current quiz 
     finalGrade() {
         var correctAnswers = this.getCorrect;
         var numberOfQuestionsAnswered = this.getNumQuestions;
         var gradePercentage = correctAnswers / numberOfQuestionsAnswered;
         this.setResult = gradePercentage * 100;
     };
-
 }
 
 export {Quiz};

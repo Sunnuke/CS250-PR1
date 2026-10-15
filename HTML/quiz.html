@@ -58,7 +58,18 @@
             if (currentQuestionIndex < quiz.getQuizQuestions.length) {
                 question = quiz.getQuizQuestions[currentQuestionIndex];
                 displayQuestion();
-            }
+            } else {
+                quiz.finalGrade();
+
+                document.getElementById("question").textContent =
+                    "Quiz Complete! Score: " + quiz.getCorrect + "/5 (" + quiz.getResult + "%)";
+
+                document.getElementById("video").style.display = "none";
+                right.style.display = "none";
+                wrong1.style.display = "none";
+                wrong2.style.display = "none";
+                wrong3.style.display = "none";
+              }
         }
 
         right.onclick = function() {
@@ -85,6 +96,10 @@
                 wrong1.classList.remove("wrongbutton");
             }, 250)
             console.log("wrong");
+
+            setTimeout(function() {
+                nextQuestion();
+                }, 500);
         }
         wrong2.onclick = function() {
             wrong2.classList.add("wrongbutton");
@@ -92,6 +107,11 @@
                 wrong2.classList.remove("wrongbutton");
             }, 250)
             console.log("wrong");
+
+            setTimeout(function() {
+                nextQuestion();
+                }, 500);
+          
         }
         wrong3.onclick = function() {
             wrong3.classList.add("wrongbutton");
@@ -99,6 +119,11 @@
                 wrong3.classList.remove("wrongbutton");
             }, 250)
             console.log("wrong");
+
+            setTimeout(function() {
+                nextQuestion();
+                }, 500);
+          
         }
 
         

@@ -4,37 +4,59 @@ class User {
     #name;
     #bestGrade;
     #gradeHistory;
+    #GPA;
 
     // Basic constructor for the user
     constructor (name) {
         this.#name = name;
         this.#bestGrade = 0;
         this.#gradeHistory = [];
+        this.#GPA = 0.0;
     }
 
     // Good old GETs & SETs nothing else!
     // Getters
-    get name() {
+    get getName() {
         return this.#name;
     }
-    get bestGrade() {
+    get getBestGrade() {
         return this.#bestGrade;
     }
-    get gradeHistory() {
+    get getGradeHistory() {
         return this.#gradeHistory;
     }
-    // Setters
-    set name(newName) {
-        this.#name = newNameame;
+    get getGPA() {
+        return this.#GPA;
     }
-    set bestGrade(grade) {
+    // Setters
+    set setName(newName) {
+        this.#name = newName;
+    }
+    set setBestGrade(grade) {
         this.#bestGrade = grade;
     }
-    set gradeHistory(newGrades) {
-        this.#gradeHistory += newGrades;
+    set setGradeHistory(newGrades) {
+        this.#gradeHistory.push(newGrades);
+    }
+    set setGPA(percent) {
+        this.#GPA = percent;
     }
 
     // Methods
     // TBD
+    calculateOverallPercentage() {
+        
+        var sum = 0;
+        var numbersThereAre = this.getGradeHistory.length;
+        const allGrades = this.getGradeHistory;
+        if (!(numbersThereAre == 0)) {
+            for (var i = 0; i < numbersThereAre; i++) {
+                sum += allGrades[i];
+            }
+            this.setGPA = sum / numbersThereAre;
+        }
+    }
 
 }
+
+export {User};

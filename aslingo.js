@@ -8,7 +8,8 @@
 // ];
 
 // Version 2
-const ASLSignsLibrary = [
+// Exporting List
+export const ASLSignsLibrary = [
     // Objects covering ASL phases
 
     // Thank you!

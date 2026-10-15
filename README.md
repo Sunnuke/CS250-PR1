@@ -4,8 +4,8 @@ A learning website designed to teach users American Sign Language (ASL). The web
 ## **Team Members**
 - **Javier Rivera**
 - **Trystan McCutcheon**
-- Utsav Ray
-- Amber Rama
+- **Utsav Ray**
+- **Amber Rama**
 
 
 FRESH FROM CLONE?

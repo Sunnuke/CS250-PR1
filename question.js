@@ -10,15 +10,15 @@ class Question {
 
     // Basic constructor for the question
     constructor (id) {
-        this.#id = id;
-        this.#answer = "";
-        this.#questionText = "";
-        this.#wrongAnswers = [];
-        this.#answerSelection =[];
+        this.#id = id; // ID number of the question object
+        this.#answer = ""; // The string that represents the answer of the object
+        this.#questionText = ""; // The string that represents the text for the question
+        this.#wrongAnswers = []; // A list of wrong answers
+        this.#answerSelection =[]; // A list of wrong answers and the answer that will be combined and randomly organized for the question
         // Calling methods to set the values of theconstructed question
         this.pickAnySign(); // Picking a random ASL sign from ASLSignsLibrary
         this.grabWrongAnswers(); // Picking 3 random ASL sign, as wrong answers from ASLSignsLibrary
-        this.makeQuizSelection(); // 
+        this.makeQuizSelection(); // Making a random list of answer selections
     }
 
     // Good old GETs & SETs nothing else!

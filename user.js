@@ -43,7 +43,7 @@ class User {
     }
 
     // Methods
-    // TBD
+    // Calculate the user's overall Grade
     calculateOverallPercentage() {
         
         var sum = 0;

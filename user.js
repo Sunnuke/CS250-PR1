@@ -29,7 +29,7 @@ class User {
         return this.#GPA;
     }
     // Setters
-    set name(newName) {
+    set setName(newName) {
         this.#name = newName;
     }
     set setBestGrade(grade) {

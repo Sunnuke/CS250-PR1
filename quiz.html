@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ASLingo Homepage</title>
+    <title>ASLingo Quiz</title>
     <link rel="stylesheet" href="style.css">
   </head>
 
@@ -10,9 +10,18 @@
       <img src="./ASLingoLogo.png" width="500">
     </h1>
 
+    <b id="score">Correct: 0</b>
+
     <iframe id="video" width="500" height="300"></iframe>
 
     <p id="question"></p>
+
+    <div class="answers">
+        <button id="right">Hello</button>
+        <button id="wrong1">Github</button>
+        <button id="wrong2">Computer Science</button>
+        <button id="wrong3">FastAPI</button>
+    </div>
     
     <script src="aslingo.js"></script>
     <script src="quiz.js"></script>
@@ -20,11 +29,53 @@
         const quiz = new Quiz(1,1);
         quiz.quizQuestions = [ASLSignsLibrary[0]];
         const sign = quiz.quizQuestions[0];
+        const score = document.getElementById("score");
 
         document.getElementById("question").textContent = sign.questions[0];
         document.getElementById("video").src = sign.sources[0].replace("watch?v=", "embed/");
-    </script>
+        
+        const right = document.getElementById("right");
+        right.textContent = sign.answers[0];
 
+        const wrong1 = document.getElementById("wrong1");
+        const wrong2 = document.getElementById("wrong2");
+        const wrong3 = document.getElementById("wrong3");
+
+        right.onclick = function() {
+            quiz.correct = quiz.correct + 1;
+            
+            right.classList.add("rightbutton");
+            setTimeout(function() {
+                right.classList.remove("rightbutton");
+            }, 250)
+            console.log("correct: ", quiz.correct);
+            score.textContent = "Correct: " + quiz.correct;
+        }
+
+        wrong1.onclick = function() {
+            wrong1.classList.add("wrongbutton");
+            setTimeout(function() {
+                wrong1.classList.remove("wrongbutton");
+            }, 250)
+            console.log("wrong");
+        }
+        wrong2.onclick = function() {
+            wrong2.classList.add("wrongbutton");
+            setTimeout(function() {
+                wrong2.classList.remove("wrongbutton");
+            }, 250)
+            console.log("wrong");
+        }
+        wrong3.onclick = function() {
+            wrong3.classList.add("wrongbutton");
+            setTimeout(function() {
+                wrong3.classList.remove("wrongbutton");
+            }, 250)
+            console.log("wrong");
+        }
+
+        
+    </script>
 
   </body>
 </html>

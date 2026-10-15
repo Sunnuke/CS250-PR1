@@ -71,7 +71,7 @@ class Question {
         var temp_list = []
         for (var i = 0; i < 3; i++) {
             currId = Math.floor(Math.random() * ASLSignsLibrary.length) + 1;
-            if (this.#wrongAnswers.length < 3) {
+            if (this.#wrongAnswers.length < 4) {
                 if (!(ids.includes(currId)) && (currId != this.getId)) {
                     ids.push(currId);
                     temp_list.push(ASLSignsLibrary[currId - 1].word);
@@ -86,25 +86,22 @@ class Question {
         }
         this.setWrongAnswers = temp_list;
     }
-    // This function is supposed to combine the correct answer with the wrong answer is and make a random selection
+    // Combine the correct answer with the wrong answers and randomize the answer choices
     makeQuizSelection() {
         var temp_answer = this.getAnswer;
         var temp_wrongs = this.getWrongAnswers;
         temp_wrongs.push(temp_answer);
         var newTemp_wrongs = [];
-        var words = [];
-        // The purpose of this loop is to take the combination list of the wrong answers with the answer and randomly assign them into a new list
-        for (var i = 0; i < 4; i++) {
+        // Randomly organize the answer choices while preventing duplicate answers from causing an infinite loop
+        while (temp_wrongs.length > 0) {
             var randomWordIndex = Math.floor(Math.random() * temp_wrongs.length);
-            if (!(words.includes(temp_wrongs[randomWordIndex]))) {
-                words.push(temp_wrongs[randomWordIndex]);
-                newTemp_wrongs.push(temp_wrongs[randomWordIndex]);
-            }
-            else {
-                i--;
+            var selectedWord = temp_wrongs.splice(randomWordIndex, 1)[0];
+
+            if (!(newTemp_wrongs.includes(selectedWord))) {
+                newTemp_wrongs.push(selectedWord);
             }
         }
-        // Updating enter selection field with new answer choices
+        // Update the answer selection with the randomized choices
         this.setAnswerSelection = newTemp_wrongs;
     }
 }

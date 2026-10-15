@@ -25,7 +25,7 @@ class User {
     }
     // Setters
     set name(newName) {
-        this.#name = newNameame;
+        this.#name = newName;
     }
     set bestGrade(grade) {
         this.#bestGrade = grade;

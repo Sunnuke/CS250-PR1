@@ -8,6 +8,12 @@ Only a frontend no backend given
 ![Archetecture Diagram](Architecture_Diagram.png)
 
 3: Trace Table → Asher, Debora, Grant
+
+| ID | Candidate requirement | Type | Source | Status | Acceptance criterion |
+|---|---|---|---|---|---|
+| CR-1 | The system shall create a quiz of 5 different questions when a user starts a quiz. | Functional | HTML/quiz.html line 32 → JAVASCRIPT/quiz.js → makeQuestions(), lines 62 to 78 | Confirmed | `new Quiz(1, 5)` returns 5 questions, each with a different id. |
+
+
 Take quiz    
 | Step | Layer | File and Function | Data In/Out |
 | :--- | :--- | :--- | :--- |

@@ -8,12 +8,6 @@ Only a frontend no backend given
 ![Archetecture Diagram](Architecture_Diagram.png)
 
 3: Trace Table → Asher, Debora, Grant
-
-| ID | Candidate requirement | Type | Source | Status | Acceptance criterion |
-|---|---|---|---|---|---|
-| CR-1 | The system shall create a quiz of 5 different questions when a user starts a quiz. | Functional | HTML/quiz.html line 32 → JAVASCRIPT/quiz.js → makeQuestions(), lines 62 to 78 | Confirmed | `new Quiz(1, 5)` returns 5 questions, each with a different id. |
-
-
 Take quiz    
 | Step | Layer | File and Function | Data In/Out |
 | :--- | :--- | :--- | :--- |
@@ -27,6 +21,21 @@ What language/framework was used to develop the app?
 What is the purpose of the app?
 How does it work?
 
+5: 
+| ID | Candidate Requirement | Type | Source | Status | Acceptance Critereon |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| CR-1 | The system shall display four options when the user takes a quiz | functional | question.js | Suspected bug | Shows four options to a question |
+| CR-2 | The system shall show previous quiz answers upon clicking the quiz history button | functional | quizHistory.js | suspected bug | Clicking on button opens up prevous answers page |
+| CR-3 | The system shall ask the user 5 questions during the quiz | functional | quiz.js | confirmed | The quiz asks 5 questions |
+| CR-4 | The system shall display a video with each question | functional | aslingo.js | confirmed | Each question has a video |
+| CR-5 | The system shall randomize the order of questions | functional | quiz.js | confirmed | Each time the quiz is ran, the order of questions is different |
+
+6:
+| ID | Requirement | Kind | Input | Expected output | Predicted result today |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| TC-1 | CR-2 | Integration | Complete a test, click quiz history button | It shows the output from your quiz attempt | It does not show the output |
+| TC-2 | CR-1 | Unit | Click start quiz button | The correct answer and 3 incorrect ones will be shown | Only the correct answer is shown |
+| TC-3 | CR-5 | Unit | Click start quiz button and go through the quiz multiple times | The quiz will be different every time | The quiz is different every time |
 
 | Part | Who contributed |
 | :--- | :--- |
@@ -34,5 +43,5 @@ How does it work?
 | 2 | Grant Phillips |
 | 3 | Asher, Grant, Debora |
 | 4 | Debora Velazquez |
-| 5 | |
-| 6 | |
+| 5 | Asher Plotsky |
+| 6 | Asher Plotsky |

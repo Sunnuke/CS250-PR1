@@ -10,7 +10,7 @@
 | Quiz generation and sign library: `JAVASCRIPT/quiz.js` (`makeQuestions`), `JAVASCRIPT/question.js`, `JAVASCRIPT/aslingo.js` | Grant Phillips | GP |
 | Quiz taking and scoring: answer buttons, score counter, `finalGrade()`, Finish Quiz in `HTML/quiz.html` | Asher Plotsky | AP |
 | Quiz history and user progress: `HTML/history.html`, `JAVASCRIPT/quizHistory.js`, `JAVASCRIPT/user.js`, `localStorage` | Debora Velazquez | DV |
-| Pages, navigation and styling: `index.html`, `HTML/index.html`, links, `CSS/style.css`, logo and stylesheet paths | [4th teammate] | [XX] |
+| Pages, navigation and styling: `index.html`, `HTML/index.html`, links, `CSS/style.css`, logo and stylesheet paths | [Moises Cortes] | [MC] |
 
 **Part 5 and Part 6 hand-out:**
 
@@ -60,23 +60,30 @@ RULES
 
 ### Stakeholder Goals
 
+
 | ID | Stakeholder | Goal |
 |---|---|---|
-| | | |
+| G-AP-01 | User | The user needs to be able to practice sign language through taking quizzes |
+
 
 ### Functional Requirements
 
+
 | ID | Requirement | Status | From Part 5 |
 |---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
+| REQ-AP-01 | The system shall display four options when the user takes a quiz | Suspected bug | CR-1 |
+| REQ-AP-02 | The system shall ask the user 5 questions during the quiz |confirmed | CR-03 |
+| REQ-AP-03 | The system shall randomize the order of questions | confirmed | CR-05 |
+| REQ-AP-04 | The system shall display a video with each question | confirmed | CR-04 |
+
 
 ### Non-Functional Requirements
 
+
 | ID | Requirement | Status | From Part 5 |
 |---|---|---|---|
-| | | | |
+| NFR-AP-01 | The video shall match the correct answer of the quiz | Confirmed | No |
+
 
 ---
 

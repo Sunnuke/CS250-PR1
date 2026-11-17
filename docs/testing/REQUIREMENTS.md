@@ -125,7 +125,7 @@ RULES
 |---|---|---|---|
 |Req-AP-01|Quiz must show 4 options that are randomly placed|bug |Cr-1|
 |Req-Ap-02|Options must all be unique without repeat |bug |Cr-2|
-|Req-Ap-03|End quiz button must show |unconfirmed |Cr-3|
+|Req-Ap-03|End quiz button must show are you sure option to confirm quitting|unconfirmed |Cr-3|
 
 ### Non-Functional Requirements
 

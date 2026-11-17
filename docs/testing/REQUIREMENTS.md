@@ -71,10 +71,9 @@ RULES
 
 | ID | Requirement | Status | From Part 5 |
 |---|---|---|---|
-| REQ-AP-01 | The system shall display four options when the user takes a quiz | Suspected bug | CR-1 |
-| REQ-AP-02 | The system shall ask the user 5 questions during the quiz |confirmed | CR-03 |
-| REQ-AP-03 | The system shall randomize the order of questions | confirmed | CR-05 |
-| REQ-AP-04 | The system shall display a video with each question | confirmed | CR-04 |
+| REQ-AP-01 | The system shall display four options when the user takes a quiz | Suspected bug | CR-01 |
+| REQ-AP-02 | The system shall randomize the order of questions | confirmed | CR-05 |
+| REQ-AP-03 | The system shall display a video with each question | confirmed | CR-04 |
 
 
 ### Non-Functional Requirements

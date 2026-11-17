@@ -99,7 +99,7 @@ RULES
 
 | ID | Requirement | Status | From Part 5 |
 |---|---|---|---|
-| REQ-DV-01 | When the user finishes a quiz, the system shall save the quiz score in browser localStorage under the `quiz history` key. | Confirmed | New |
+| REQ-DV-01 | When the user finishes a quiz, the system shall save the quiz score in browser localStorage under the `quizHistory` key. | Confirmed | New |
 | REQ-DV-02 | When the user opens the quiz history page, the system shall display all previously saved quiz scores. | Suspected bug | CR-2: The system shall show previous quiz answers upon clicking the quiz history button. |
 | REQ-DV-03 | When no quiz scores have been saved, the system shall display a message stating that no quiz history is available. | Suspected bug | New |
 

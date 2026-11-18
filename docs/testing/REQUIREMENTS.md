@@ -71,10 +71,9 @@ RULES
 
 | ID | Requirement | Status | From Part 5 |
 |---|---|---|---|
-| REQ-AP-01 | The system shall display four options when the user takes a quiz | Suspected bug | CR-1 |
-| REQ-AP-02 | The system shall ask the user 5 questions during the quiz |confirmed | CR-03 |
-| REQ-AP-03 | The system shall randomize the order of questions | confirmed | CR-05 |
-| REQ-AP-04 | The system shall display a video with each question | confirmed | CR-04 |
+| REQ-AP-01 | The system shall display four options when the user takes a quiz | Suspected bug | CR-01 |
+| REQ-AP-02 | The system shall randomize the order of questions | confirmed | CR-05 |
+| REQ-AP-03 | The system shall display a video with each question | confirmed | CR-04 |
 
 
 ### Non-Functional Requirements
@@ -116,19 +115,22 @@ RULES
 ### Stakeholder Goals
 
 | ID | Stakeholder | Goal |
-|---|---|---|
+|G-Ap-01|Asl Learner|User is able to complete an asl quiz each question is different and shows your score at the end|
 | | | |
 
 ### Functional Requirements
 
 | ID | Requirement | Status | From Part 5 |
 |---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
+|Req-AP-01|Quiz must show 4 options that are randomly placed|bug |Cr-1|
+|Req-Ap-02|Options must all be unique without repeat |bug |Cr-2|
+|Req-Ap-03|End quiz button must show are you sure option to confirm quitting|unconfirmed |Cr-3|
 
 ### Non-Functional Requirements
 
 | ID | Requirement | Status | From Part 5 |
+Debora-vv
 |---|---|---|---|
+|NFR Ap-01|All question options will be placed in the center of the option box|Unconfirmed|New|
+main
 | | | | |

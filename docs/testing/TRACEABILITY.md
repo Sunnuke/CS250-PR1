@@ -19,10 +19,10 @@ Fill this in **after** everyone's work is merged. One row per requirement.
 | REQ-GP-03 | No | Grant | GP-03 | Fail | [GP-03] |
 | NFR-GP-01 | No | Grant | GP-03 | Fail | [GP-03] |
 | G-GP-01 | No | Grant | GP-04 | Fail | [GP-04] |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
+|Req Mc-01| No | Moises |Mc-01|Fail|[Mc-01]|
+|Req Mc-02|No |Moises|Mc-02 |Fail|[Mc-02]|
+|Req Mc-03|no|Moises|Mc-03 |Fail |[[Mc-03]|
+|Nfr Mc-01|no|Moises|Mc-01|pass|[Mc-01]|
 | | | | | | |
 | | | | | | |
 | | | | | | |

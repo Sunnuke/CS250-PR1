@@ -115,19 +115,19 @@ RULES
 ### Stakeholder Goals
 
 | ID | Stakeholder | Goal |
-|---|---|---|
+|G-Ap-01|Asl Learner|User is able to complete an asl quiz each question is different and shows your score at the end|
 | | | |
 
 ### Functional Requirements
 
 | ID | Requirement | Status | From Part 5 |
 |---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
+|Req-AP-01|Quiz must show 4 options that are randomly placed|bug |Cr-1|
+|Req-Ap-02|Options must all be unique without repeat |bug |Cr-2|
+|Req-Ap-03|End quiz button must show are you sure option to confirm quitting|unconfirmed |Cr-3|
 
 ### Non-Functional Requirements
 
 | ID | Requirement | Status | From Part 5 |
-|---|---|---|---|
+|NFR Ap-01|All question options will be placed in the center of the option box|Unconfirmed|New|
 | | | | |

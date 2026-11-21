@@ -23,9 +23,11 @@ Fill this in **after** everyone's work is merged. One row per requirement.
 |Req Mc-02|No |Moises|Mc-02 |Fail|[Mc-02]|
 |Req Mc-03|no|Moises|Mc-03 |Fail |[[Mc-03]|
 |Nfr Mc-01|no|Moises|Mc-01|pass|[Mc-01]|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+|G-DV-01| new | Debora | DV-04 | fail | #103 |
+| REQ-DV-01 | new | Debora | DV-02, DV-03 | pass | N/A |
+| REQ-DV-02|  CR-2 | Debora | DV-01 | fail | #100 |
+| REQ-DV-03 | new | Debora | DV-05 | fail | #104 |
+| NFR-DV-01 | new | Debora | DV-01 | fail | #100 |
 
 ## Gaps
 
@@ -39,13 +41,13 @@ Put a Test ID next to each type. Team minimum: all 7.
 
 | Test type | Test ID |
 |---|---|
-| Unit | AP-01 |
-| Integration | |
+| Unit | AP-01, DV-02 |
+| Integration | DV-01, DV-03 |
 | System (E2E) | AP-02 |
-| Acceptance | GP-04 |
+| Acceptance | GP-04, DV-04 |
 | Boundary Value | GP-03 |
-| Negative | |
-| Security | |
+| Negative | DV-05 |
+| Security | TBD |
 
 ## Validation Findings
 
@@ -53,6 +55,9 @@ A Validation finding means the system does what the requirement says, but the re
 
 | Requirement ID | Goal it fails | Why | Issue # |
 |---|---|---|---|
+REQ-GP-01 | G-GP-01 | the requirements only requires different sign IDs. It allows duplicate sign words, so a quiz may show the same sign more than once even though the requirment passes. | TBD|
+
+the sustem currently has one validation finding. GP-01 passes because the quiz uses five different IDs, but IDs i and 3 both represent "Hello" therefore the requirement does not fully support the learner's goal of practicing different signs 
 | | | | |
 
 **If you found none,** explain in 2 to 3 sentences why every requirement truly serves its Goal:
@@ -63,16 +68,16 @@ A Validation finding means the system does what the requirement says, but the re
 
 | | Count |
 |---|---|
-| Part 5 requirements carried over | |
-| New requirements added | |
-| Part 6 tests upgraded (out of 3) | |
-| Total requirements | |
-| Total test cases | |
-| Passed | |
-| Failed | |
-| Issues opened | |
-| Critical issues | |
+| Part 5 requirements carried over | 4 |
+| New requirements added | 14 |
+| Part 6 tests upgraded (out of 3) | 2 |
+| Total requirements | 18 |
+| Total test cases | 17 |
+| Passed | 6 |
+| Failed | 11 |
+| Issues opened | 3 confirmed; remaning issue numbers are TBD |
+| Critical issues | 0 |
 
 **In one sentence, would you ship this system today? Why or why not?**
 
->
+> no, i would not ship this system today becasue several major requirements fail, quiz history display correctly, answer options are incomplete, and the team still needs a security test.

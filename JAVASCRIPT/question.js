@@ -89,7 +89,7 @@ class Question {
     // Combine the correct answer with the wrong answers and randomize the answer choices
     makeQuizSelection() {
         var temp_answer = this.getAnswer;
-        var temp_wrongs = this.getWrongAnswers;
+        const temp_wrongs = [...this.getWrongAnswers];
         temp_wrongs.push(temp_answer);
         var newTemp_wrongs = [];
         // Randomly organize the answer choices while preventing duplicate answers from causing an infinite loop

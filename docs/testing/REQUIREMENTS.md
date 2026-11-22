@@ -92,21 +92,21 @@ RULES
 
 | ID | Stakeholder | Goal |
 |---|---|---|
-| | | |
+| G-DV-01 | ASLingo learner | The learner needs to review previous quiz scores so they can track their progress over time. |
 
 ### Functional Requirements
 
 | ID | Requirement | Status | From Part 5 |
 |---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
+| REQ-DV-01 | When the user finishes a quiz, the system shall save the quiz score in browser localStorage under the `quizHistory` key. | Confirmed | New |
+| REQ-DV-02 | When the user opens the quiz history page, the system shall display all previously saved quiz scores. | Suspected bug | CR-2: The system shall show previous quiz answers upon clicking the quiz history button. |
+| REQ-DV-03 | When no quiz scores have been saved, the system shall display a message stating that no quiz history is available. | Suspected bug | New |
 
 ### Non-Functional Requirements
 
 | ID | Requirement | Status | From Part 5 |
 |---|---|---|---|
-| | | | |
+| NFR-DV-01 | The quiz history page shall display saved scores in readable text without horizontal scrolling on a 1366-by-768 screen. | Suspected bug | New |
 
 ---
 
@@ -115,19 +115,22 @@ RULES
 ### Stakeholder Goals
 
 | ID | Stakeholder | Goal |
-|---|---|---|
+|G-Ap-01|Asl Learner|User is able to complete an asl quiz each question is different and shows your score at the end|
 | | | |
 
 ### Functional Requirements
 
 | ID | Requirement | Status | From Part 5 |
 |---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
+|Req-AP-01|Quiz must show 4 options that are randomly placed|bug |Cr-1|
+|Req-Ap-02|Options must all be unique without repeat |bug |Cr-2|
+|Req-Ap-03|End quiz button must show are you sure option to confirm quitting|unconfirmed |Cr-3|
 
 ### Non-Functional Requirements
 
 | ID | Requirement | Status | From Part 5 |
+Debora-vv
 |---|---|---|---|
+|NFR Ap-01|All question options will be placed in the center of the option box|Unconfirmed|New|
+main
 | | | | |

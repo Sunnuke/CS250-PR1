@@ -60,10 +60,15 @@ export class Quiz {
     // Methods
     // Generate unique Question objects
     makeQuestions(num) {
+        // Issue #90: Reject impossible requests before the loop starts.
+        if (num > ASLSignsLibrary.length) {
+            throw new RangeError("Requested more questions than available signs.");
+        }
+
         var numOfQuestions = num;
         var ids = [];
         var currId = 0;
-        
+
         // This for loop is pretty much like the one in question.js but it is not nested!
         for (var i = 0; i < numOfQuestions; i++) {
             currId = Math.floor(Math.random() * ASLSignsLibrary.length) + 1;
@@ -76,6 +81,8 @@ export class Quiz {
             }
         }
     }
+
+
     // Compute the grade of the current quiz 
     finalGrade() {
         var correctAnswers = this.getCorrect;

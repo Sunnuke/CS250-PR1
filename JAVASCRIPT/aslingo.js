@@ -15,12 +15,12 @@ export const ASLSignsLibrary = [
     // Thank you!
     { 
         id: 1,
-        word: "Hello",
+        word: "Thank You",
         sources: [
             "https://www.youtube.com/watch?v=IvRwNLNR4_w"
         ],
         questions: ["Please watch the following video, then select the best answer that describes what is being signed?"],
-        answers: ["Hello"]
+        answers: ["Thank You"]
     },
     // Nice to meet you
     { 

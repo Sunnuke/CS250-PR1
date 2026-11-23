@@ -44,11 +44,26 @@
             document.getElementById("question").textContent = question.getQuestionText;
             document.getElementById("video").src = 
                 ASLSignsLibrary[question.getId - 1].sources[0].replace("watch?v=", "embed/");
+            right.textContent = "";
+            wrong1.textContent = "";
+            wrong2.textContent = "";
+            wrong3.textContent = "";
+            for (let i = 0; i < 4; i++){
+                let text = question.getAnswerSelection[i]
+                if (text == question.getAnswer) {
+                    right.textContent = text;
+                }
+                else if (wrong1.textContent == ""){
+                    wrong1.textContent = text;
+                }
+                else if (wrong2.textContent == ""){
+                    wrong2.textContent = text;
+                }
+                else {
+                    wrong3.textContent = text;
+                }
+            }
             
-            right.textContent = question.getAnswer;
-            wrong1.textContent = question.getWrongAnswers[0];
-            wrong2.textContent = question.getWrongAnswers[1];
-            wrong3.textContent = question.getWrongAnswers[2];
         }
 
         displayQuestion();

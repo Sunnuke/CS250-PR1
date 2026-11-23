@@ -2,7 +2,7 @@
 import {Question} from "./question.js";
 import {ASLSignsLibrary} from "./aslingo.js";
 
-class Quiz {
+export class Quiz {
     // Date fields are private (plz ask me if you don't understand the "#" but it is supposed to make data fields private?)
     #ID;
     #numQuestions;
@@ -84,5 +84,3 @@ class Quiz {
         this.setResult = gradePercentage * 100;
     };
 }
-
-export {Quiz};

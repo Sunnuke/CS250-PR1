@@ -142,6 +142,9 @@
           
         }
         document.getElementById("finish").onclick = function() {
+            if (!window.confirm("Finish this quiz?")) {
+                return;
+            }
             quiz.finalGrade();
         
             var history = JSON.parse(localStorage.getItem("quizHistory")) || [];

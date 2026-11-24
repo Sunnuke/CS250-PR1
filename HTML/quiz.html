@@ -39,12 +39,12 @@
         const wrong1 = document.getElementById("wrong1");
         const wrong2 = document.getElementById("wrong2");
         const wrong3 = document.getElementById("wrong3");
+        const answerButtons = [right, wrong1, wrong2, wrong3];
         
         function displayQuestion() {
             document.getElementById("question").textContent = question.getQuestionText;
             document.getElementById("video").src = 
                 ASLSignsLibrary[question.getId - 1].sources[0].replace("watch?v=", "embed/");
-          const answerButtons = [right, wrong1, wrong2, wrong3];
           //replaces old code with ranomizer and array using same consts
           for(let i = 0; i < answerButtons.length; i++) {
             answerButtons[i].textContent = question.getAnswerSelection[i];

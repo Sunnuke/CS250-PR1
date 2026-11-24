@@ -10,3 +10,20 @@ Mc-02 answer only appears in the top left
 <img width="1920" height="1080" alt="Screenshot (61)" src="https://github.com/user-attachments/assets/c54efc06-4afe-47b8-b6cd-51c852649536" />
 <img width="1920" height="1080" alt="Screenshot (63)" src="https://github.com/user-attachments/assets/c8bdca68-8aea-4c4a-a6b6-0d9b40ec6d74" />
 all answers are always in the top left without any changes throughout the quiz.
+
+after bug fixes:
+
+1. run live server [pass] loads normally
+2. run application [pass] runs normally
+3. start quiz [pass] starts up without issues
+4. select any option [pass] (now the right answer moves to different boxes)
+5. observe if option are different [pass] (the answer is now not always in the top left besides random chance)
+6. all tests now pass without issues
+<img width="1920" height="1080" alt="Screenshot (66)" src="https://github.com/user-attachments/assets/57cc032c-8e15-4af4-af9e-c074c7ba0322" />
+
+<img width="1920" height="1080" alt="Screenshot (67)" src="https://github.com/user-attachments/assets/bb52c595-c4de-4657-9b3e-5771455ed23a" />
+
+<img width="1920" height="1080" alt="Screenshot (69)" src="https://github.com/user-attachments/assets/6667da79-9d49-4e8e-88a6-1a39f9c52aed" />
+
+<img width="1920" height="1080" alt="Screenshot (68)" src="https://github.com/user-attachments/assets/f158175d-305a-4bac-8642-f01ecc3b3c5c" />
+

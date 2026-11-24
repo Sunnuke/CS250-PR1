@@ -48,9 +48,10 @@
           //replaces old code with ranomizer and array using same consts
           for(let i = 0; i < answerButtons.length; i++) {
             answerButtons[i].textContent = question.getAnswerSelection[i];
+            answerButtons[i[.disabled = false;
           }
         }
-
+      
         displayQuestion();
 
         function nextQuestion() {
@@ -72,60 +73,30 @@
                 wrong3.style.display = "none";
               }
         }
-
-        right.onclick = function() {
-            const newScore = quiz.getCorrect + 1;
-            quiz.setCorrect = newScore;
-            
-            right.classList.add("rightbutton");
-            
-            setTimeout(function() {
-                right.classList.remove("rightbutton");
-            }, 250);
-          
-            console.log("correct: ", quiz.getCorrect);
+      
+        //added new logic to prevent answer being "wrong1,2,3"
+      answerbuttons.forEach(function(button) {
+        button.onclick = function() {
+          const selectedAnswer = butt.textContent;
+          const isCorret = selectedAnswer == question.getAnswer;
+          //prevent double tapping answers
+          answerButtons.forEach(btn => btn.disabled = true);
+          if (isCorrect){
+            quiz.setCorrect = quiz.getCorrect + 1;
+            button.classList.add("rightbutton");
             score.textContent = "Correct: " + quiz.getCorrect;
+          } else {
+            button.classList.add("wrongbutton");
+          }
+          setTimeout(function() {
+            button.classList.remove("rightbutton");
+            button.classList.remove("wrongbutton");
+            nextQuestion();
+          }, 500);
+        };
+      };)
 
-            setTimeout(function() {
-                nextQuestion();
-            }, 500);
-        }
-
-        wrong1.onclick = function() {
-            wrong1.classList.add("wrongbutton");
-            setTimeout(function() {
-                wrong1.classList.remove("wrongbutton");
-            }, 250)
-            console.log("wrong");
-
-            setTimeout(function() {
-                nextQuestion();
-                }, 500);
-        }
-        wrong2.onclick = function() {
-            wrong2.classList.add("wrongbutton");
-            setTimeout(function() {
-                wrong2.classList.remove("wrongbutton");
-            }, 250)
-            console.log("wrong");
-
-            setTimeout(function() {
-                nextQuestion();
-                }, 500);
-          
-        }
-        wrong3.onclick = function() {
-            wrong3.classList.add("wrongbutton");
-            setTimeout(function() {
-                wrong3.classList.remove("wrongbutton");
-            }, 250)
-            console.log("wrong");
-
-            setTimeout(function() {
-                nextQuestion();
-                }, 500);
-          
-        }
+    
         document.getElementById("finish").onclick = function() {
             if (!window.confirm("Finish this quiz?")) {
                 return;

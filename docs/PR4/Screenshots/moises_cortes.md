@@ -27,3 +27,19 @@ after bug fixes:
 
 <img width="1920" height="1080" alt="Screenshot (68)" src="https://github.com/user-attachments/assets/f158175d-305a-4bac-8642-f01ecc3b3c5c" />
 
+bug fix two MC 01 Answers remain static and do not move from each box
+
+
+both bugs are closely tied, the first fix mc 02 solved this one when we randomized
+the consts and now they are placed in each box at random which also solves this
+issue.
+
+the same tests were used as above. 
+
+live server start up
+run application 
+start quiz
+select any option
+observe each question check for randomization
+
+no changes were needed for this bug

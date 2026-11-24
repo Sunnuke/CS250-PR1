@@ -48,7 +48,7 @@
           //replaces old code with ranomizer and array using same consts
           for(let i = 0; i < answerButtons.length; i++) {
             answerButtons[i].textContent = question.getAnswerSelection[i];
-            answerButtons[i[.disabled = false;
+            answerButtons[i].disabled = false;
           }
         }
       
@@ -75,10 +75,10 @@
         }
       
         //added new logic to prevent answer being "wrong1,2,3"
-      answerbuttons.forEach(function(button) {
+      answerButtons.forEach(function(button) {
         button.onclick = function() {
-          const selectedAnswer = butt.textContent;
-          const isCorret = selectedAnswer == question.getAnswer;
+          const selectedAnswer = button.textContent;
+          const isCorrect = selectedAnswer == question.getAnswer;
           //prevent double tapping answers
           answerButtons.forEach(btn => btn.disabled = true);
           if (isCorrect){
@@ -94,7 +94,7 @@
             nextQuestion();
           }, 500);
         };
-      };)
+      });
 
     
         document.getElementById("finish").onclick = function() {
